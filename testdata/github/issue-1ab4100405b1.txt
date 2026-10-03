@@ -1,0 +1,3 @@
+{"a":"github:dependabot[bot]","c":1772720400,"n":"537418f14b0c571e","op":"create","ts":1772720400,"v":1,"val":"issue"}
+{"a":"github:dependabot[bot]","c":1772720400,"n":"1c33a8825f2776a7","op":"title","ts":1772720400,"v":1,"val":"Anchor blobs are pruned by gc"}
+{"a":"github:dependabot[bot]","c":1772720400,"n":"eb16847f007c41cc","op":"label.add","ts":1772720400,"v":1,"val":"storage"}

@@ -1,0 +1,141 @@
+{
+  "data": {
+    "repository": {
+      "issues": {
+        "totalCount": 4,
+        "pageInfo": { "hasNextPage": false, "endCursor": "Y3Vyc29yOnYyOpHOAAAAAQ==" },
+        "nodes": [
+          {
+            "id": "I_epic",
+            "number": 20,
+            "url": "https://github.com/hdweiss/git-issue/issues/20",
+            "title": "Merge is order-independent",
+            "body": "",
+            "createdAt": "2026-03-01T09:00:00Z",
+            "updatedAt": "2026-03-01T09:00:00Z",
+            "state": "OPEN",
+            "stateReason": "",
+            "locked": false,
+            "activeLockReason": "",
+            "author": { "login": "hdweiss" },
+            "milestone": null,
+            "issueType": null,
+            "parent": null,
+            "duplicateOf": null,
+            "labels": { "nodes": [] },
+            "assignees": { "nodes": [] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "timelineItems": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            }
+          },
+          {
+            "id": "I_child",
+            "number": 21,
+            "url": "https://github.com/hdweiss/git-issue/issues/21",
+            "title": "Sort the note body",
+            "body": "",
+            "createdAt": "2026-03-01T10:00:00Z",
+            "updatedAt": "2026-03-04T10:00:00Z",
+            "state": "OPEN",
+            "stateReason": "",
+            "locked": false,
+            "activeLockReason": "",
+            "author": { "login": "hdweiss" },
+            "milestone": null,
+            "issueType": null,
+            "parent": { "id": "I_epic" },
+            "duplicateOf": null,
+            "labels": { "nodes": [] },
+            "assignees": { "nodes": [] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "timelineItems": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "__typename": "ParentIssueAddedEvent",
+                  "id": "PIAE_kwDOAbCdEf6AaAaA",
+                  "createdAt": "2026-03-02T08:00:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "parent": { "id": "I_epic" }
+                },
+                {
+                  "__typename": "BlockedByAddedEvent",
+                  "id": "BBAE_kwDOAbCdEf6AaAaB",
+                  "createdAt": "2026-03-02T09:00:00Z",
+                  "actor": { "login": "octocat" },
+                  "blockingIssue": { "id": "I_blocker" }
+                },
+                {
+                  "__typename": "BlockedByRemovedEvent",
+                  "id": "BBRE_kwDOAbCdEf6AaAaC",
+                  "createdAt": "2026-03-03T09:00:00Z",
+                  "actor": { "login": "octocat" },
+                  "blockingIssue": { "id": "I_blocker" }
+                },
+                {
+                  "__typename": "BlockedByAddedEvent",
+                  "id": "BBAE_kwDOAbCdEf6AaAaD",
+                  "createdAt": "2026-03-04T09:00:00Z",
+                  "actor": { "login": "octocat" },
+                  "blockingIssue": { "id": "I_elsewhere" }
+                }
+              ]
+            }
+          },
+          {
+            "id": "I_transferred",
+            "number": 22,
+            "url": "https://github.com/hdweiss/git-issue/issues/22",
+            "title": "Filed under the epic, with no history to say so",
+            "body": "",
+            "createdAt": "2026-03-01T11:00:00Z",
+            "updatedAt": "2026-03-01T11:00:00Z",
+            "state": "OPEN",
+            "stateReason": "",
+            "locked": false,
+            "activeLockReason": "",
+            "author": { "login": "hdweiss" },
+            "milestone": null,
+            "issueType": null,
+            "parent": { "id": "I_epic" },
+            "duplicateOf": null,
+            "labels": { "nodes": [] },
+            "assignees": { "nodes": [] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "timelineItems": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            }
+          },
+          {
+            "id": "I_dup",
+            "number": 23,
+            "url": "https://github.com/hdweiss/git-issue/issues/23",
+            "title": "Merge reorders lines",
+            "body": "",
+            "createdAt": "2026-03-01T12:00:00Z",
+            "updatedAt": "2026-03-05T12:00:00Z",
+            "state": "CLOSED",
+            "stateReason": "DUPLICATE",
+            "locked": false,
+            "activeLockReason": "",
+            "author": { "login": "octocat" },
+            "milestone": null,
+            "issueType": null,
+            "parent": null,
+            "duplicateOf": { "id": "I_epic" },
+            "labels": { "nodes": [] },
+            "assignees": { "nodes": [] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "timelineItems": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}

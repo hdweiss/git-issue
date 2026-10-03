@@ -1,0 +1,19 @@
+{
+  "count": 1,
+  "value": [
+    {
+      "id": 1, "workItemId": 1240, "rev": 1,
+      "revisedBy": { "displayName": "Ann Poe", "uniqueName": "ann.poe@corp.example", "id": "22222222-2222-2222-2222-222222222222" },
+      "revisedDate": "9999-01-01T00:00:00Z",
+      "fields": {
+        "System.WorkItemType": { "newValue": "User Story" },
+        "System.Title": { "newValue": "Remember the last used area" },
+        "System.Description": { "newValue": "So a pull needs no flags." },
+        "System.State": { "newValue": "New" },
+        "System.AreaPath": { "newValue": "MyProj\\Web" },
+        "System.CreatedDate": { "newValue": "2026-01-07T11:15:00Z" },
+        "System.ChangedDate": { "newValue": "2026-01-07T11:15:00Z" }
+      }
+    }
+  ]
+}

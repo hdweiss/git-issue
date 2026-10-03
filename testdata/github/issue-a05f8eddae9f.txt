@@ -1,0 +1,18 @@
+{"a":"github:hdweiss","c":1772355600,"n":"cdb6b548c4cdfe3e","op":"create","ts":1772355600,"v":1,"val":"issue"}
+{"a":"github:hdweiss","c":1772355600,"n":"7013ab4f5fdfad10","op":"title","ts":1772355600,"v":1,"val":"merge reorders stuff"}
+{"a":"github:hdweiss","c":1772355600,"n":"c5447ed183ff5462","op":"description","ts":1772355600,"v":1,"val":"cat_sort_uniq rewrites physical order.\nOrder must carry no meaning."}
+{"a":"github:hdweiss","c":1772355600,"n":"00accfca155bcc27","op":"type","ts":1772355600,"v":1,"val":"bug"}
+{"a":"github:hdweiss","c":1772355600,"n":"fba1ae3a07e6e1fd","op":"label.add","ts":1772355600,"v":1,"val":"confirmed"}
+{"a":"github:hdweiss","c":1772355900,"n":"6b0a2744598bf3b6","op":"label.add","ts":1772355900,"v":1,"val":"needs-triage"}
+{"a":"github:hdweiss","c":1772355960,"n":"1197aa37da82f6d9","op":"label.add","ts":1772355960,"v":1,"val":"storage"}
+{"a":"github:hdweiss","c":1772356020,"n":"0fa63d26e8be47c9","op":"assignee.add","ts":1772356020,"v":1,"val":"hdweiss"}
+{"a":"github:octocat","c":1772361000,"n":"c311c6ec60a69b7a","op":"comment","ts":1772361000,"v":1,"val":"Reproduced on a fresh clone."}
+{"a":"github:octocat","c":1772362800,"n":"3e74cc08627e7d15","op":"title","ts":1772362800,"v":1,"val":"Notes merge reorders lines"}
+{"a":"github:ghost","c":1772439300,"n":"df106eda8f5f3d2b","op":"comment","ts":1772439300,"v":1,"val":"Two pre-existing lines were reattributed to the merge commit."}
+{"a":"github:octocat","c":1772442000,"n":"1a9c7137f1b10748","op":"label.remove","ref":"5864e915b8d4eee9db7f7722db23a9b176568e33","ts":1772442000,"v":1}
+{"a":"github:hdweiss","c":1772442060,"n":"7801c1d10d4df222","op":"milestone","ts":1772442060,"v":1,"val":"v1"}
+{"a":"github:hdweiss","c":1772539200,"n":"802880581c5752f5","op":"title","ts":1772539200,"v":1,"val":"Notes merge reorders lines permanently"}
+{"a":"github:hdweiss","c":1772607600,"n":"ae12ff84ae6987e0","op":"locked","ts":1772607600,"v":1,"val":true}
+{"a":"github:hdweiss","c":1772607600,"n":"1a7abee4c1a02336","op":"lock.reason","ts":1772607600,"v":1,"val":"resolved"}
+{"a":"github:hdweiss","c":1772607660,"n":"9be1b8218e5afc01","op":"status","ts":1772607660,"v":1,"val":"closed"}
+{"a":"github:hdweiss","c":1772607660,"n":"8cc8c061e706b98f","op":"status.reason","ts":1772607660,"v":1,"val":"completed"}

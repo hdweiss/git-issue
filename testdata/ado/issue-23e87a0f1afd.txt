@@ -1,0 +1,5 @@
+{"a":"ado:ann.poe@corp.example","c":1767784500,"n":"35d972e90fef6130","op":"create","ts":1767784500,"v":1,"val":"issue"}
+{"a":"ado:ann.poe@corp.example","c":1767784500,"n":"b74530c8b67805b0","op":"type","ts":1767784500,"v":1,"val":"user story"}
+{"a":"ado:ann.poe@corp.example","c":1767784500,"n":"29101b09bf3b2f81","op":"title","ts":1767784500,"v":1,"val":"Remember the last used area"}
+{"a":"ado:ann.poe@corp.example","c":1767784500,"n":"4c5d538a9bcbfe2c","op":"description","ts":1767784500,"v":1,"val":"So a pull needs no flags."}
+{"a":"ado:ann.poe@corp.example","c":1767784500,"n":"b72293a2c55ca2f6","op":"status","ts":1767784500,"v":1,"val":"New"}

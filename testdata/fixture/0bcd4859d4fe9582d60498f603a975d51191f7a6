@@ -1,0 +1,8 @@
+{"a":"hdweiss@gmail.com","c":1,"n":"c357afa6a0e5b331","op":"create","ts":1787000000,"v":1,"val":"issue"}
+{"a":"hdweiss@gmail.com","c":2,"n":"984503c200afb468","op":"title","ts":1787000000,"v":1,"val":"Duplicate of the fanout question"}
+{"a":"hdweiss@gmail.com","c":3,"n":"30f283e58135b128","op":"status","ts":1787000000,"v":1,"val":"open"}
+{"a":"hdweiss@gmail.com","c":4,"n":"77359f76364e5c3b","op":"status","ts":1787000600,"v":1,"val":"closed"}
+{"a":"hdweiss@gmail.com","c":5,"n":"095efe978577e699","op":"status.reason","ts":1787000600,"v":1,"val":"duplicate"}
+{"a":"hdweiss@gmail.com","c":6,"n":"070e66b9e4bf6642","op":"rel.add","ref":"4b0755a3e7697bfdf17e42e9f4b307c161ea2a40","ts":1787000600,"v":1,"val":"duplicate-of"}
+{"a":"hdweiss@gmail.com","c":7,"n":"7cd791de2e72f889","op":"locked","ts":1787000700,"v":1,"val":true}
+{"a":"hdweiss@gmail.com","c":8,"n":"a7b2f0a8f1e295e6","op":"lock.reason","ts":1787000700,"v":1,"val":"too heated"}

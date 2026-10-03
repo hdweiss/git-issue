@@ -1,0 +1,4 @@
+{"a":"hdweiss@gmail.com","c":1,"n":"649ce55d3ca78616","op":"create","ts":1787000000,"v":1,"val":"issue"}
+{"a":"hdweiss@gmail.com","c":2,"n":"bbc63bce0ef93cef","op":"title","ts":1787000000,"v":1,"val":"Anchor blobs are pruned by gc"}
+{"a":"hdweiss@gmail.com","c":3,"n":"13a1216c7d3bc1d0","op":"status","ts":1787000000,"v":1,"val":"open"}
+{"a":"hdweiss@gmail.com","c":4,"n":"04f574c9f02184f4","op":"description","ts":1787000000,"v":1,"val":"Reproduced locally on a fresh clone."}

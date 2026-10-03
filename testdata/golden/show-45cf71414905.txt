@@ -1,0 +1,46 @@
+issue 45cf71414905d68f357764974f9f107319ad1605
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:53:20 2026 +0200
+Status: open
+
+    cat_sort_uniq reorders the blob
+
+    Reactions: +1 (2)
+
+comment 98df1a846e6fa1e1ed22741d9e85402a6482e6c0
+Author: rev@example.com
+Date:   Mon Aug 17 22:58:20 2026 +0200
+
+    Confirmed: absent in a fresh clone — and after gc.
+
+    Reactions: heart (1)
+
+    comment 4a15086c24f6656d47d4b04deb88ee5216ec2ab4
+    Author: hdweiss@gmail.com
+    Date:   Mon Aug 17 22:59:20 2026 +0200
+
+        Only after gc, though.
+
+        comment e24599f9125b9285edf627c007832681cf3670f2
+        Author: rev@example.com
+        Date:   Mon Aug 17 23:00:20 2026 +0200
+
+            Depth is a display decision.
+
+comment 6d2dcb8e5f4872dd82aac57f91218e03e08fe1c0
+Author: spam@example.com
+Date:   Mon Aug 17 23:00:40 2026 +0200
+
+    (comment retracted)
+
+    comment f9e1fa4b04e8aa20c39e3568204c29432856e07f
+    Author: hdweiss@gmail.com
+    Date:   Mon Aug 17 23:00:50 2026 +0200
+
+        Reply beneath a retracted parent.
+
+comment 5b02410bff5f1309de0b7029203130d1b9120c53
+Author: rev@example.com
+Date:   Mon Aug 17 23:01:10 2026 +0200
+
+    Parent never arrived; must render at root.

@@ -1,0 +1,5 @@
+{
+  "value": [
+    { "id": "42", "url": "https://dev.azure.com/testorg/MyProj/_apis/wit/workItems/42" }
+  ]
+}

@@ -1,0 +1,8 @@
+{"a":"ado:alice@example.com","c":1711962000,"n":"cba24e737ab94991","op":"create","ts":1711962000,"v":1,"val":"review"}
+{"a":"ado:alice@example.com","c":1711962000,"n":"a776c857882bbe82","op":"title","ts":1711962000,"v":1,"val":"Retire the old walker"}
+{"a":"ado:alice@example.com","c":1711962000,"n":"23bf9c7b45345ffa","op":"base","ts":1711962000,"v":1,"val":"main"}
+{"a":"ado:alice@example.com","c":1711962000,"n":"5d7c616560f5d92c","op":"head","ts":1711962000,"v":1,"val":"repo-fork/retire-walker"}
+{"a":"ado:alice@example.com","c":1711962000,"n":"39dd9ade48857ca7","op":"head.sha","ts":1711962000,"v":1,"val":"bbbb1111cccc2222dddd3333eeee4444ffff5555"}
+{"a":"ado:alice@example.com","c":1711962000,"n":"d9eb17e4f1be739e","op":"status","ts":1711962000,"v":1,"val":"Completed"}
+{"a":"ado:alice@example.com","c":1711962000,"n":"a4189456a03516ec","op":"assignee.add","ts":1711962000,"v":1,"val":"ado:bob@example.com"}
+{"a":"ado:bob@example.com","c":1712145600,"n":"3981692e4a3d6982","op":"verdict.add","ref":"bbbb1111cccc2222dddd3333eeee4444ffff5555","ts":1712145600,"v":1,"val":"approve"}

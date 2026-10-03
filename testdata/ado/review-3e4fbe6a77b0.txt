@@ -1,0 +1,16 @@
+{"a":"ado:alice@example.com","c":1714557600,"n":"d9154d58ac6ef097","op":"create","ts":1714557600,"v":1,"val":"review"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"d61aea371ed51b50","op":"title","ts":1714557600,"v":1,"val":"Fix the area subtree walk"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"8dc7720de9e6215b","op":"description","ts":1714557600,"v":1,"val":"Reworks the walk so a leaf area keeps its subtree."}
+{"a":"ado:alice@example.com","c":1714557600,"n":"de160581ca6ea76c","op":"base","ts":1714557600,"v":1,"val":"main"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"c5f766b6a86577b8","op":"head","ts":1714557600,"v":1,"val":"fix-area-walk"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"5712c757baf163b2","op":"head.sha","ts":1714557600,"v":1,"val":"3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"7dc80c4771deb93a","op":"label.add","ts":1714557600,"v":1,"val":"bug"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"284b31d903cae289","op":"assignee.add","ts":1714557600,"v":1,"val":"ado:bob@example.com"}
+{"a":"ado:alice@example.com","c":1714557600,"n":"9554631e1dc27898","op":"assignee.add","ts":1714557600,"v":1,"val":"ado:carol@example.com"}
+{"a":"ado:bob@example.com","c":1714561200,"n":"edef3b5c3fd3c398","op":"comment","ts":1714561200,"v":1,"val":"Looks close. One nit below."}
+{"a":"ado:carol@example.com","c":1714561500,"n":"3961ddcbe8a41011","op":"comment","ts":1714561500,"v":1,"val":"This drops the subtree when the area is a leaf."}
+{"a":"ado:carol@example.com","c":1714561500,"n":"058fda4542d362c5","op":"comment.anchor","ref":"cb89e98aba961a8696d976481a7cee13fc1c0778","ts":1714561500,"v":1,"val":"3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d internal/issue/area.go 42-44"}
+{"a":"ado:carol@example.com","c":1714561500,"n":"977f095ab9bf4ff8","op":"comment.resolve","ref":"cb89e98aba961a8696d976481a7cee13fc1c0778","ts":1714561500,"v":1,"val":true}
+{"a":"ado:alice@example.com","c":1714640400,"n":"7a8a8b15f3426eac","op":"comment","ref":"cb89e98aba961a8696d976481a7cee13fc1c0778","ts":1714640400,"v":1,"val":"Fixed in the latest push."}
+{"a":"ado:bob@example.com","c":1714640700,"n":"ae4860618f8e04fb","op":"verdict.add","ref":"3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d","ts":1714640700,"v":1,"val":"approve"}
+{"a":"ado:carol@example.com","c":1714640700,"n":"6378f3319e1ea59e","op":"verdict.add","ref":"3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d","ts":1714640700,"v":1,"val":"request-changes"}

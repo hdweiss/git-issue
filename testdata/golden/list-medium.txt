@@ -1,0 +1,42 @@
+issue f55f8e0bfdc1dbbdb48c914ee2fe4a144b88e2d1
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:53:20 2026 +0200
+Status: open
+
+    (no title)
+
+issue e9037839d7f861580c0312a9fe04d94f3ca33703
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:53:20 2026 +0200
+Status: open
+
+    Anchor blobs are pruned by gc
+
+issue 885797fb2d9bc0c3da54cfec3815e66b4018a9ed
+Author:    hdweiss@gmail.com
+Date:      Mon Aug 17 22:53:20 2026 +0200
+Status:    open
+Type:      bug
+Labels:    bug, design
+Assignees: hdweiss@gmail.com, rev@example.com
+Milestone: v1.0
+Parent:    4b0755a3e769  (unknown)
+
+    Reject "short" ids — fatal: failed to resolve ✓
+
+issue 45cf71414905d68f357764974f9f107319ad1605
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:53:20 2026 +0200
+Status: open
+
+    cat_sort_uniq reorders the blob
+
+issue 0bcd4859d4fe9582d60498f603a975d51191f7a6
+Author:       hdweiss@gmail.com
+Date:         Mon Aug 17 22:53:20 2026 +0200
+Status:       closed
+Reason:       duplicate
+Duplicate of: 4b0755a3e769  (unknown)
+Locked:       too heated
+
+    Duplicate of the fanout question

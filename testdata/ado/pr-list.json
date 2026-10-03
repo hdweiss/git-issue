@@ -1,0 +1,56 @@
+{
+  "count": 3,
+  "value": [
+    {
+      "pullRequestId": 22,
+      "status": "active",
+      "title": "Fix the area subtree walk",
+      "description": "Reworks the walk so a leaf area keeps its subtree.",
+      "isDraft": false,
+      "createdBy": { "displayName": "Alice", "uniqueName": "alice@example.com", "id": "alice-guid" },
+      "creationDate": "2024-05-01T10:00:00Z",
+      "sourceRefName": "refs/heads/fix-area-walk",
+      "targetRefName": "refs/heads/main",
+      "lastMergeSourceCommit": { "commitId": "3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d" },
+      "reviewers": [
+        { "displayName": "Bob", "uniqueName": "bob@example.com", "id": "bob-guid", "vote": 10, "isRequired": true },
+        { "displayName": "Carol", "uniqueName": "carol@example.com", "id": "carol-guid", "vote": -10, "isRequired": false }
+      ],
+      "labels": [ { "name": "bug", "active": true } ],
+      "_links": { "web": { "href": "https://dev.azure.com/testorg/MyProj/_git/repo/pullrequest/22" } }
+    },
+    {
+      "pullRequestId": 23,
+      "status": "completed",
+      "title": "Retire the old walker",
+      "description": "",
+      "isDraft": false,
+      "createdBy": { "displayName": "Alice", "uniqueName": "alice@example.com", "id": "alice-guid" },
+      "creationDate": "2024-04-01T09:00:00Z",
+      "closedDate": "2024-04-03T12:00:00Z",
+      "sourceRefName": "refs/heads/retire-walker",
+      "targetRefName": "refs/heads/main",
+      "lastMergeSourceCommit": { "commitId": "bbbb1111cccc2222dddd3333eeee4444ffff5555" },
+      "forkSource": { "repository": { "name": "repo-fork" } },
+      "reviewers": [
+        { "displayName": "Bob", "uniqueName": "bob@example.com", "id": "bob-guid", "vote": 5, "isRequired": true }
+      ],
+      "labels": [],
+      "_links": { "web": { "href": "https://dev.azure.com/testorg/MyProj/_git/repo/pullrequest/23" } }
+    },
+    {
+      "pullRequestId": 24,
+      "status": "active",
+      "title": "WIP: async walk",
+      "isDraft": true,
+      "createdBy": { "displayName": "Bob", "uniqueName": "bob@example.com", "id": "bob-guid" },
+      "creationDate": "2024-05-10T08:00:00Z",
+      "sourceRefName": "refs/heads/async-walk",
+      "targetRefName": "refs/heads/main",
+      "lastMergeSourceCommit": { "commitId": "9999888877776666555544443333222211110000" },
+      "reviewers": [],
+      "labels": [],
+      "_links": { "web": { "href": "https://dev.azure.com/testorg/MyProj/_git/repo/pullrequest/24" } }
+    }
+  ]
+}

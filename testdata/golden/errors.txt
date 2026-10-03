@@ -1,0 +1,39 @@
+### git issue deadbeef
+rc=1
+git-issue: unknown issue 'deadbeef'
+### git issue bogus
+rc=1
+git-issue: unknown issue 'bogus'
+### git issue remove nosuch
+rc=1
+git-issue: unknown issue 'nosuch'
+### git issue add
+rc=1
+git-issue: no title given, and no editor to open: use --title, -F, or set core.editor
+### git issue pull nosuchremote
+rc=1
+git-issue: no remote named 'nosuchremote'; git issue pull needs a configured remote
+### git issue --format detailed
+rc=1
+git-issue: unknown format 'detailed'; try oneline or medium
+usage: git issue [<id> [<comment>]] [--oneline] [--format <oneline|medium>]
+                 [--tree] [--no-tree] [--state <s>] [--type <t>] [-l <label>] [-a <who>] [--author <who>]
+
+Shorthand for `git issue list` and `git issue show <id> [<comment>]` — the
+filters are list's; see 'git issue list --help' for what they and the format
+flags do. To edit an issue, use 'git issue edit <id>'.
+
+An id here shows that issue, and never lists. To list what is filed under one,
+name it after list: 'git issue list <id>'.
+### git issue --edit
+rc=1
+git-issue: flag provided but not defined: -edit
+usage: git issue [<id> [<comment>]] [--oneline] [--format <oneline|medium>]
+                 [--tree] [--no-tree] [--state <s>] [--type <t>] [-l <label>] [-a <who>] [--author <who>]
+
+Shorthand for `git issue list` and `git issue show <id> [<comment>]` — the
+filters are list's; see 'git issue list --help' for what they and the format
+flags do. To edit an issue, use 'git issue edit <id>'.
+
+An id here shows that issue, and never lists. To list what is filed under one,
+name it after list: 'git issue list <id>'.

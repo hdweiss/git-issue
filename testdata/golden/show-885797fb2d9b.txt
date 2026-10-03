@@ -1,0 +1,16 @@
+issue 885797fb2d9bc0c3da54cfec3815e66b4018a9ed
+Author:    hdweiss@gmail.com
+Date:      Mon Aug 17 22:53:20 2026 +0200
+Status:    open
+Type:      bug
+Labels:    bug, design
+Assignees: hdweiss@gmail.com, rev@example.com
+Milestone: v1.0
+Parent:    4b0755a3e769  (unknown)
+
+    Reject "short" ids — fatal: failed to resolve ✓
+
+    First paragraph, escaped onto one physical line.
+
+    Second paragraph after a blank line.
+        indented tail

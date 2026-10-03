@@ -1,0 +1,10 @@
+{
+  "value": [
+    {
+      "state": "failed",
+      "context": { "name": "quality-gate", "genre": "sonarqube" },
+      "targetUrl": "https://sonar.example.com/22",
+      "creationDate": "2024-05-02T09:05:00Z"
+    }
+  ]
+}

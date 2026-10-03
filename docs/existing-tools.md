@@ -1,0 +1,8 @@
+- https://beads.gascity.com/
+- https://github.com/ljtn/epiq
+- https://github.com/git-bug/git-bug
+- https://linear.app/
+  - https://github.com/joa23/linear-cli
+- (abandon) https://github.com/google/git-appraise
+- https://git-scm.com/docs/git-notes
+  - https://dev.to/shrsv/git-notes-unraveled-history-mechanics-and-practical-uses-25i9

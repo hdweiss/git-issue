@@ -1,0 +1,157 @@
+{
+  "data": {
+    "repository": {
+      "issues": {
+        "totalCount": 3,
+        "pageInfo": { "hasNextPage": false, "endCursor": "Y3Vyc29yOnYyOpHOAAAAAQ==" },
+        "nodes": [
+          {
+            "id": "I_kwDOAbCdEf6AaAaA",
+            "number": 12,
+            "url": "https://github.com/hdweiss/git-issue/issues/12",
+            "title": "Notes merge reorders lines permanently",
+            "body": "cat_sort_uniq rewrites physical order.\nOrder must carry no meaning.",
+            "createdAt": "2026-03-01T09:00:00Z",
+            "updatedAt": "2026-03-04T07:01:00Z",
+            "state": "CLOSED",
+            "stateReason": "COMPLETED",
+            "locked": true,
+            "activeLockReason": "RESOLVED",
+            "author": { "login": "hdweiss" },
+            "milestone": { "title": "v1" },
+            "issueType": { "name": "bug" },
+            "labels": { "nodes": [{ "name": "storage" }, { "name": "confirmed" }] },
+            "assignees": { "nodes": [{ "login": "hdweiss" }] },
+            "comments": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "id": "IC_kwDOAbCdEf6BbBbB",
+                  "body": "Reproduced on a fresh clone.",
+                  "createdAt": "2026-03-01T10:30:00Z",
+                  "author": { "login": "octocat" }
+                },
+                {
+                  "id": "IC_kwDOAbCdEf6CcCcC",
+                  "body": "Two pre-existing lines were reattributed to the merge commit.",
+                  "createdAt": "2026-03-02T08:15:00Z",
+                  "author": null
+                }
+              ]
+            },
+            "timelineItems": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "__typename": "LabeledEvent",
+                  "id": "LE_kwDOAbCdEf6DdDdD",
+                  "createdAt": "2026-03-01T09:05:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "label": { "name": "needs-triage" }
+                },
+                {
+                  "__typename": "LabeledEvent",
+                  "id": "LE_kwDOAbCdEf6EeEeE",
+                  "createdAt": "2026-03-01T09:06:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "label": { "name": "storage" }
+                },
+                {
+                  "__typename": "AssignedEvent",
+                  "id": "AE_kwDOAbCdEf6FfFfF",
+                  "createdAt": "2026-03-01T09:07:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "assignee": { "login": "hdweiss" }
+                },
+                {
+                  "__typename": "RenamedTitleEvent",
+                  "id": "RT_kwDOAbCdEf6GgGgG",
+                  "createdAt": "2026-03-01T11:00:00Z",
+                  "actor": { "login": "octocat" },
+                  "previousTitle": "merge reorders stuff",
+                  "currentTitle": "Notes merge reorders lines"
+                },
+                {
+                  "__typename": "UnlabeledEvent",
+                  "id": "UL_kwDOAbCdEf6HhHhH",
+                  "createdAt": "2026-03-02T09:00:00Z",
+                  "actor": { "login": "octocat" },
+                  "label": { "name": "needs-triage" }
+                },
+                {
+                  "__typename": "MilestonedEvent",
+                  "id": "ME_kwDOAbCdEf6IiIiI",
+                  "createdAt": "2026-03-02T09:01:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "milestoneTitle": "v1"
+                },
+                {
+                  "__typename": "RenamedTitleEvent",
+                  "id": "RT_kwDOAbCdEf6JjJjJ",
+                  "createdAt": "2026-03-03T12:00:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "previousTitle": "Notes merge reorders lines",
+                  "currentTitle": "Notes merge reorders lines permanently"
+                },
+                {
+                  "__typename": "LockedEvent",
+                  "id": "LO_kwDOAbCdEf6KkKkK",
+                  "createdAt": "2026-03-04T07:00:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "lockReason": "RESOLVED"
+                },
+                {
+                  "__typename": "ClosedEvent",
+                  "id": "CE_kwDOAbCdEf6LlLlL",
+                  "createdAt": "2026-03-04T07:01:00Z",
+                  "actor": { "login": "hdweiss" },
+                  "stateReason": "COMPLETED"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I_kwDOAbCdEf6MmMmM",
+            "number": 13,
+            "url": "https://github.com/hdweiss/git-issue/issues/13",
+            "title": "Anchor blobs are pruned by gc",
+            "body": "",
+            "createdAt": "2026-03-05T14:20:00Z",
+            "updatedAt": "2026-03-05T14:20:00Z",
+            "state": "OPEN",
+            "stateReason": "",
+            "locked": false,
+            "activeLockReason": "",
+            "author": { "login": "dependabot[bot]" },
+            "milestone": null,
+            "issueType": null,
+            "labels": { "nodes": [{ "name": "storage" }] },
+            "assignees": { "nodes": [] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "timelineItems": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] }
+          },
+          {
+            "id": "I_kwDOAbCdEf6NnNnN",
+            "number": 14,
+            "url": "https://github.com/hdweiss/git-issue/issues/14",
+            "title": "Transferred issue with no timeline",
+            "body": "History did not survive the transfer.",
+            "createdAt": "2026-03-06T08:00:00Z",
+            "updatedAt": "2026-03-07T09:30:00Z",
+            "state": "CLOSED",
+            "stateReason": "NOT_PLANNED",
+            "locked": false,
+            "activeLockReason": "",
+            "author": null,
+            "milestone": { "title": "v2" },
+            "issueType": null,
+            "labels": { "nodes": [] },
+            "assignees": { "nodes": [{ "login": "octocat" }] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "timelineItems": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] }
+          }
+        ]
+      }
+    }
+  }
+}

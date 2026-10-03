@@ -1,0 +1,70 @@
+{
+  "value": [
+    {
+      "id": 1,
+      "publishedDate": "2024-05-01T11:00:00Z",
+      "isDeleted": false,
+      "comments": [
+        {
+          "id": 1,
+          "parentCommentId": 0,
+          "content": "Looks close. One nit below.",
+          "commentType": "text",
+          "author": { "displayName": "Bob", "uniqueName": "bob@example.com", "id": "bob-guid" },
+          "publishedDate": "2024-05-01T11:00:00Z",
+          "isDeleted": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "publishedDate": "2024-05-01T11:05:00Z",
+      "status": "fixed",
+      "isDeleted": false,
+      "threadContext": {
+        "filePath": "/internal/issue/area.go",
+        "rightFileStart": { "line": 42, "offset": 1 },
+        "rightFileEnd": { "line": 44, "offset": 10 }
+      },
+      "pullRequestThreadContext": {
+        "iterationContext": { "firstComparingIteration": 1, "secondComparingIteration": 2 }
+      },
+      "comments": [
+        {
+          "id": 10,
+          "parentCommentId": 0,
+          "content": "This drops the subtree when the area is a leaf.",
+          "commentType": "text",
+          "author": { "displayName": "Carol", "uniqueName": "carol@example.com", "id": "carol-guid" },
+          "publishedDate": "2024-05-01T11:05:00Z",
+          "isDeleted": false
+        },
+        {
+          "id": 11,
+          "parentCommentId": 10,
+          "content": "Fixed in the latest push.",
+          "commentType": "text",
+          "author": { "displayName": "Alice", "uniqueName": "alice@example.com", "id": "alice-guid" },
+          "publishedDate": "2024-05-02T09:00:00Z",
+          "isDeleted": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "publishedDate": "2024-05-01T11:10:00Z",
+      "isDeleted": false,
+      "comments": [
+        {
+          "id": 20,
+          "parentCommentId": 0,
+          "content": "Bob voted 10",
+          "commentType": "system",
+          "author": { "displayName": "Bob", "uniqueName": "bob@example.com", "id": "bob-guid" },
+          "publishedDate": "2024-05-01T11:10:00Z",
+          "isDeleted": false
+        }
+      ]
+    }
+  ]
+}

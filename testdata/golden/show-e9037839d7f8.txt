@@ -1,0 +1,8 @@
+issue e9037839d7f861580c0312a9fe04d94f3ca33703
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:53:20 2026 +0200
+Status: open
+
+    Anchor blobs are pruned by gc
+
+    Reproduced locally on a fresh clone.

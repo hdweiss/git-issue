@@ -1,0 +1,57 @@
+{
+  "count": 2,
+  "value": [
+    {
+      "id": 1234,
+      "rev": 4,
+      "fields": {
+        "System.WorkItemType": "Bug",
+        "System.Title": "Login fails on the second attempt",
+        "Microsoft.VSTS.TCM.ReproSteps": "Sign in, sign out, sign in again.",
+        "System.State": "Resolved",
+        "System.Reason": "Fixed",
+        "System.AreaPath": "MyProj\\Web\\Auth",
+        "System.IterationPath": "MyProj\\Release 1\\Sprint 3",
+        "System.Tags": "regression; ux",
+        "System.AssignedTo": {
+          "displayName": "Jane Roe",
+          "uniqueName": "Jane.Roe@corp.example",
+          "id": "11111111-1111-1111-1111-111111111111"
+        },
+        "System.CreatedBy": {
+          "displayName": "Ann Poe",
+          "uniqueName": "ann.poe@corp.example",
+          "id": "22222222-2222-2222-2222-222222222222"
+        },
+        "System.CreatedDate": "2026-01-05T09:00:00Z",
+        "System.ChangedDate": "2026-01-09T14:30:00Z",
+        "System.CommentCount": 2
+      },
+      "relations": [
+        {
+          "rel": "System.LinkTypes.Hierarchy-Reverse",
+          "url": "https://dev.azure.com/contoso/_apis/wit/workItems/900"
+        }
+      ]
+    },
+    {
+      "id": 1240,
+      "rev": 1,
+      "fields": {
+        "System.WorkItemType": "User Story",
+        "System.Title": "Remember the last used area",
+        "System.Description": "So a pull needs no flags.",
+        "System.State": "New",
+        "System.AreaPath": "MyProj\\Web",
+        "System.IterationPath": "MyProj",
+        "System.CreatedBy": {
+          "displayName": "Ann Poe",
+          "uniqueName": "ann.poe@corp.example",
+          "id": "22222222-2222-2222-2222-222222222222"
+        },
+        "System.CreatedDate": "2026-01-07T11:15:00Z",
+        "System.ChangedDate": "2026-01-07T11:15:00Z"
+      }
+    }
+  ]
+}

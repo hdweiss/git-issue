@@ -1,0 +1,255 @@
+.TH GIT-REVIEW 1 "2026-08-30" "git-review" "Git Extensions"
+.SH NAME
+git-review \- offline-first code review stored in the git object store
+.SH SYNOPSIS
+.B git review
+.RI [ command ]
+.RI [ args ]
+.br
+.B git review
+.RI [ id " [" comment ]]
+.SH DESCRIPTION
+.B git review
+tracks change proposals inside the repository itself. A review is a base, a
+head, commentary anchored to the code, verdicts from the people who read it,
+and a terminal state of merged or abandoned. It is stored as git objects under
+dedicated refs, alongside the code, and syncs the way code does.
+.PP
+A pull request is a review with an entry in the origin ledger; a review of a
+local branch \(em by a person or by an agent \(em is one that has none. There
+is no second type for that case and no flag telling them apart, and every
+command works the same on both.
+.PP
+With no arguments it lists reviews; with an id it shows that review. Those are
+shorthands for
+.B list
+and
+.BR show .
+.SH COMMANDS
+.TP
+.B add
+Open a new review. With no
+.B --base
+and
+.BR --head ,
+both come from where you are standing: the head is the branch you are on,
+qualified with its remote when it has one, and the base is that remote's
+default branch.
+.TP
+.B list
+List reviews, with filters for state, base branch, draft, checks, label,
+reviewer and author. On a terminal the listing nests under each review's
+parent; down a pipe it prints flat and in words rather than glyphs.
+.TP
+.B show
+Print one review in full: its branches and revision, each person's current
+verdict, the head commit's check runs, and every thread \(em where in the code
+it sits, whether it is resolved, and whether its anchor still describes the
+head. A second id prints one thread.
+.TP
+.B status
+What is standing between the review and a merge. Exits 0 when nothing is and 1
+when something is, so a script can branch on it.
+.B --json
+gives an agent the same answer with a shape.
+.TP
+.B checks
+The check runs recorded against a commit.
+.B --set
+records one.
+.TP
+.B diff
+The change the review proposes, computed from base\(embhead. Every
+.BR git-diff (1)
+flag passes through.
+.TP
+.B checkout
+Fetch the review's head and check it out, from the fork it lives in where that
+is not a remote here. With no id, check out the repository's default branch; with
+a second id, open the file that comment is anchored to at its line, using
+.B review.openCommand
+where the editor is one this build does not know how to point at a line.
+.TP
+.B comment
+Comment on a review.
+.B --on
+.IR path : line
+anchors it to a place in the code; a second id replies in that thread.
+.TP
+.B edit
+Change a review's fields, or rewrite one comment.
+.B --sync
+brings the recorded revision up to the head branch as it stands now.
+.TP
+.B close
+Close the review \(em abandoned, not merged. With a second id it resolves one
+thread instead.
+.TP
+.B reopen
+Reopen the review, or unresolve one thread.
+.TP
+.B approve
+.TQ
+.B request-changes
+Record a verdict. It carries the revision it was cast against, so a later push
+makes it stale.
+.TP
+.B remove
+Unlist the review, or retract one comment.
+.TP
+.B log
+The tracker's own history, one commit per action.
+.TP
+.B pull
+.TQ
+.B push
+Sync with another clone or with a forge. A bare remote name moves the notes
+refs and the origin ledger;
+.B github:
+reads and writes pull requests through the GitHub bridge, and
+.B ado:
+does the same through the Azure DevOps bridge. Either bridge target's URL must
+name the repository. See
+.BR "THE TWO LEGS" .
+.SH THE POSITIONAL SLOTS
+One positional is the review; two are a comment inside it. That slot is the
+same for
+.BR show ", " edit ", " remove ", " close " and " reopen ,
+so
+.B close
+.I id
+closes the review and
+.B close
+.I id comment
+resolves that thread. Comment ids abbreviate like object names, and the prefix
+only has to be unique within the review.
+.SH ANCHORS
+A review comment's anchor records the path, the lines and
+.I the revision it was written against
+\(em never just the path. Two distinct things then make it stop describing the
+head, and they are reported as the different things they are:
+.TP
+.B outdated
+The anchor's commit is still reachable, but the file under it changed. This is
+the ordinary case after a plain push. Note that ancestry alone is not the test:
+an anchor's commit stays an ancestor across every non-rewriting push, so a
+client testing reachability would call a thread current long after the lines
+under it were replaced.
+.TP
+.B detached
+The anchor's commit is not reachable from the head \(em a rebase or an amend
+\(em and it may not be in this object store at all.
+.PP
+Neither is ever repaired by moving the anchor. An anchor is part of what
+somebody said, and relocating it would edit their words to point somewhere they
+never looked.
+.SH VERDICTS
+A verdict is one person's position, and it supersedes their previous one rather
+than retracting it: both events stay in the blob, so the record that somebody
+once asked for changes survives. A verdict cast against an older revision is
+.BR stale ,
+shown as stale and never dropped or quietly re-pointed at the new head.
+.PP
+Verdicts are advisory. Nothing in a grow-only set can prevent a merge; upstream
+that is branch protection's job, and here
+.B status
+reports it and stops.
+.SH CHECKS
+Build results, quality gates and scans live on
+.B refs/notes/checks/runs
+.RI "\(em keyed by " "commit sha" ", not by review."
+A check result is a fact about a commit: true whichever review contains it,
+shared by every branch that contains it, and outliving the review. That keying
+is also what makes rebases behave with no logic \(em an old commit keeps its
+old results, and a rewritten one is a different key with none yet \(em and it
+is why
+.B git review checks --commit HEAD --set build=fail
+works with no review involved.
+.PP
+.B git log --notes=checks/runs
+renders them against the commits themselves.
+.PP
+The ref is not core state. A clone that has never fetched it reads no checks
+and reports none failing, which is the correct reading of what it holds rather
+than a claim that the build passed.
+.SH THE TWO LEGS
+.B pull
+and
+.B push
+each have two, and they write to different places.
+.PP
+The git leg carries three refs between clones: the reviews, the checks, and the
+origin ledger. The ledger goes first in both directions \(em a clone that
+received reviews without their mappings would re-file every one of them
+upstream on its next bridge push, and nothing undoes that. Nothing is ever
+forced: every one of these refs is a grow-only set of lines, so a refused push
+is answered by pulling and pushing again, and no write is lost either way.
+.PP
+The bridge leg talks to a forge's API. A push prints its plan, asks before it
+writes anything, and journals each mapping it earns as it earns it \(em so an
+interrupted run is resumed rather than repeated. It reads the tracker's current
+state by replaying the importer against it, which is what makes
+.B --dry-run
+exact rather than approximate.
+.PP
+Some things a pull request will not take, and each is reported per field rather
+than dropped:
+.BR closes ,
+because GitHub derives closing links from keywords in the description (on Azure
+DevOps the link is a separate artifact link, not written yet);
+.BR status.reason ,
+because a pull request has no close reason; a status of
+.BR merged ,
+because a merge is performed upstream; and
+.B head
+or
+.BR head.sha ,
+because a tracker learns those from the git remote. The Azure DevOps push also
+reports reviewer and milestone changes unsent, and posts a verdict's message as
+its own discussion thread since a vote carries no body. A review this clone
+opened can only be filed once its branch is on the remote, and pushing the
+branch stays an ordinary
+.B git push
+that this command will not do behind your back.
+.SH CLOSES DOES NOT CLOSE
+.B --closes
+records that a review is meant to close an issue. It records intent and nothing
+more: nothing here closes that issue, now or on merge. An issue's status
+changes when an event on the issue's own blob says so.
+.PP
+Two reasons, and the first is structural. A cascade cannot converge \(em
+folding one blob would depend on another's folded state, so a clone holding the
+review but not the issue would fold a different answer from the same data. And
+the link is not always a mandate: a review merged in a fork should not close an
+issue upstream.
+.PP
+.B git review
+never writes to
+.BR refs/notes/issues/* .
+.SH FILES
+.TP
+.B refs/notes/reviews/open
+Reviews in any non-terminal status.
+.TP
+.B refs/notes/reviews/archived
+Reviews that have reached a terminal one.
+.TP
+.B refs/notes/checks/runs
+Check runs, keyed by commit sha.
+.TP
+.B refs/git-issue/origins
+Which upstream object each entity is, per tracker.
+.SH SEE ALSO
+.BR git-issue (1),
+.BR git-notes (1),
+.BR git-log (1)
+.PP
+The specification is in the repository's
+.B docs/
+directory:
+.B reviews.md
+for this type's vocabulary,
+.B blob-format.md
+for what one entity is,
+.B storage-model.md
+for where the bytes live.

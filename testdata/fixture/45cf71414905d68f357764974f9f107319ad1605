@@ -1,0 +1,17 @@
+{"a":"hdweiss@gmail.com","c":1,"n":"1f4091d90b857c3b","op":"create","ts":1787000000,"v":1,"val":"issue"}
+{"a":"hdweiss@gmail.com","c":2,"n":"b2a74e2e0c99ac2e","op":"title","ts":1787000000,"v":1,"val":"cat_sort_uniq reorders the blob"}
+{"a":"hdweiss@gmail.com","c":3,"n":"7b4f88dd9d672a35","op":"status","ts":1787000000,"v":1,"val":"open"}
+{"a":"rev@example.com","c":4,"n":"d88820ff7870a624","op":"comment","ts":1787000300,"v":1,"val":"Confirmed: absent in a fresh clone."}
+{"a":"hdweiss@gmail.com","c":5,"n":"e98d1dea4f120255","op":"comment","ref":"98df1a846e6fa1e1ed22741d9e85402a6482e6c0","ts":1787000360,"v":1,"val":"Only after gc, though."}
+{"a":"rev@example.com","c":6,"n":"60c18e59d22e0cf5","op":"comment","ref":"4a15086c24f6656d47d4b04deb88ee5216ec2ab4","ts":1787000420,"v":1,"val":"Depth is a display decision."}
+{"a":"rev@example.com","c":7,"n":"f2f1f5bd81329326","op":"comment.edit","ref":"98df1a846e6fa1e1ed22741d9e85402a6482e6c0","ts":1787000430,"v":1,"val":"Confirmed: absent in a fresh clone — and after gc."}
+{"a":"spam@example.com","c":8,"n":"3d06592e46901cc0","op":"comment","ts":1787000440,"v":1,"val":"BUY CHEAP LABELS"}
+{"a":"hdweiss@gmail.com","c":9,"n":"3876bab04a9f967c","op":"comment","ref":"6d2dcb8e5f4872dd82aac57f91218e03e08fe1c0","ts":1787000450,"v":1,"val":"Reply beneath a retracted parent."}
+{"a":"hdweiss@gmail.com","c":10,"n":"259f6be9ee458d84","op":"comment.remove","ref":"6d2dcb8e5f4872dd82aac57f91218e03e08fe1c0","ts":1787000460,"v":1}
+{"a":"rev@example.com","c":11,"n":"e9e9d6365f7257c6","op":"comment","ref":"0000000000000000000000000000000000000000","ts":1787000470,"v":1,"val":"Parent never arrived; must render at root."}
+{"a":"hdweiss@gmail.com","c":12,"n":"78d28333ad8dae4e","op":"react","ref":"45cf71414905d68f357764974f9f107319ad1605","ts":1787000500,"v":1,"val":"+1"}
+{"a":"rev@example.com","c":13,"n":"71d789a33ade0c53","op":"react","ref":"45cf71414905d68f357764974f9f107319ad1605","ts":1787000505,"v":1,"val":"+1"}
+{"a":"hdweiss@gmail.com","c":14,"n":"efc22b58ac86b7aa","op":"react","ref":"45cf71414905d68f357764974f9f107319ad1605","ts":1787000506,"v":1,"val":"+1"}
+{"a":"hdweiss@gmail.com","c":15,"n":"cedbc0e8ec0e63fb","op":"react","ref":"98df1a846e6fa1e1ed22741d9e85402a6482e6c0","ts":1787000510,"v":1,"val":"heart"}
+{"a":"rev@example.com","c":16,"n":"a5d914ac7b9ddfec","op":"react","ref":"98df1a846e6fa1e1ed22741d9e85402a6482e6c0","ts":1787000515,"v":1,"val":"-1"}
+{"a":"hdweiss@gmail.com","c":17,"n":"d22c6e4421ec4c5e","op":"react.remove","ref":"19a3c0e626f0990b8d066cbeace857d7707e1424","ts":1787000520,"v":1}

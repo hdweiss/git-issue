@@ -1,0 +1,9 @@
+issue 0bcd4859d4fe9582d60498f603a975d51191f7a6
+Author:       hdweiss@gmail.com
+Date:         Mon Aug 17 22:53:20 2026 +0200
+Status:       closed
+Reason:       duplicate
+Duplicate of: 4b0755a3e769  (unknown)
+Locked:       too heated
+
+    Duplicate of the fanout question

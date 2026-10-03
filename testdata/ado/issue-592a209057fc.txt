@@ -1,0 +1,19 @@
+{"a":"ado:ann.poe@corp.example","c":1767603600,"n":"fd68553d7b420693","op":"create","ts":1767603600,"v":1,"val":"issue"}
+{"a":"ado:ann.poe@corp.example","c":1767603600,"n":"ccfd341f7447ea4b","op":"type","ts":1767603600,"v":1,"val":"bug"}
+{"a":"ado:ann.poe@corp.example","c":1767603600,"n":"ad20e9c83faa21bb","op":"title","ts":1767603600,"v":1,"val":"Login fails"}
+{"a":"ado:ann.poe@corp.example","c":1767603600,"n":"1255b64d19b245d6","op":"description","ts":1767603600,"v":1,"val":"Sign in twice."}
+{"a":"ado:ann.poe@corp.example","c":1767603600,"n":"5913b3286911e3df","op":"status","ts":1767603600,"v":1,"val":"New"}
+{"a":"ado:jane.roe@corp.example","c":1767693600,"n":"c6dcd348a8116832","op":"assignee.add","ts":1767693600,"v":1,"val":"jane.roe@corp.example"}
+{"a":"ado:jane.roe@corp.example","c":1767693600,"n":"9b13a540c7be97df","op":"status","ts":1767693600,"v":1,"val":"Active"}
+{"a":"ado:jane.roe@corp.example","c":1767693600,"n":"9ee2663372f0c51a","op":"label.add","ts":1767693600,"v":1,"val":"needs-repro"}
+{"a":"ado:jane.roe@corp.example","c":1767693600,"n":"1c8b3d4184a4833b","op":"label.add","ts":1767693600,"v":1,"val":"ux"}
+{"a":"ado:jane.roe@corp.example","c":1767693600,"n":"f4c83349cefa1ca2","op":"title","ts":1767693600,"v":1,"val":"Login fails on the second attempt"}
+{"a":"ado:jane.roe@corp.example","c":1767700800,"n":"153aa51d312e7788","op":"comment","ts":1767700800,"v":1,"val":"Reproduced locally."}
+{"a":"ado:jane.roe@corp.example","c":1767702600,"n":"782afd81565578f1","op":"comment.edit","ref":"8d14198613fab9328201f6f0a5e45b8839a6b1a0","ts":1767702600,"v":1,"val":"Reproduced on the shared build, not just locally."}
+{"a":"ado:ann.poe@corp.example","c":1767859200,"n":"ebec4c7a33b60cad","op":"comment","ts":1767859200,"v":1,"val":"Never mind."}
+{"a":"ado:ann.poe@corp.example","c":1767859200,"n":"59faa2b2e6f996e6","op":"comment.remove","ref":"d5253912613271acf0f5ac6e5d6b24d9d02cd6c4","ts":1767859200,"v":1}
+{"a":"ado:ann.poe@corp.example","c":1767861900,"n":"d62afdf6e2a1c379","op":"description","ts":1767861900,"v":1,"val":"Sign in, sign out, sign in again."}
+{"a":"ado:ann.poe@corp.example","c":1767861900,"n":"3062efdf1494a193","op":"milestone","ts":1767861900,"v":1,"val":"Release 1/Sprint 3"}
+{"a":"ado:ann.poe@corp.example","c":1767861900,"n":"00f0cf632b2c1e9f","op":"label.remove","ref":"bfabfbab4461d62efe7853bf31fae5219e90cbd0","ts":1767861900,"v":1}
+{"a":"ado:ann.poe@corp.example","c":1767861900,"n":"d3f2351973ff0ee2","op":"label.add","ts":1767861900,"v":1,"val":"regression"}
+{"a":"ado:jane.roe@corp.example","c":1767969000,"n":"1abbef45745b4752","op":"status","ts":1767969000,"v":1,"val":"Resolved"}

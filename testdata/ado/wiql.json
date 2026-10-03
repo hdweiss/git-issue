@@ -1,0 +1,6 @@
+{
+  "queryType": "flat",
+  "asOf": "2026-03-01T00:00:00Z",
+  "columns": [{ "referenceName": "System.Id", "name": "ID" }],
+  "workItems": [{ "id": 1234 }, { "id": 1240 }]
+}

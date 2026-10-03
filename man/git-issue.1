@@ -1,0 +1,228 @@
+.TH GIT-ISSUE 1 "2026-08-29" "git-issue" "Git Extensions"
+.SH NAME
+git-issue \- offline-first issue tracker stored in the git object store
+.SH SYNOPSIS
+.B git issue
+.RI [ command ]
+.RI [ args ]
+.br
+.B git issue
+.RI [ id " [" comment ]]
+.SH DESCRIPTION
+.B git issue
+tracks issues inside the repository itself. Issues, comments and their full
+edit history are stored as git objects under dedicated refs, alongside the
+code, and sync the way code does: fetch and push, just against different refs.
+There is no server and no database.
+.PP
+With no arguments it lists issues; with an id it shows that issue. Those are
+shorthands for
+.B list
+and
+.BR show .
+.SH COMMANDS
+.TP
+.B add
+File a new issue. Without
+.B -t
+an editor opens, as
+.B git commit
+does without
+.BR -m .
+.TP
+.B list
+List issues, with filters for state, type, label, assignee and author. On a
+terminal the listing is nested under each issue's parent; down a pipe it prints
+flat.
+.B --tree
+and
+.B --no-tree
+force it either way. An id lists the whole subtree filed under that issue.
+.TP
+.B show
+Show one issue in full, or one comment on it and the replies under it.
+.B --web
+opens the issue's page on the tracker it was pulled from or pushed to, through
+.BR git-web--browse (1).
+.TP
+.B comment
+Post a comment on an issue.
+.B --in-reply-to
+nests it under another entry instead of starting a new thread.
+.TP
+.B edit
+Edit an issue, or one comment on it. Each field that changed is written as its
+own event, so concurrent edits to different fields both survive a merge.
+.B --status
+sets a raw status a bridge uses;
+.B --status-reason
+the raw close reason.
+.TP
+.B close
+Close an issue \(em a single
+.B status
+event.
+.B --as
+records why:
+.BR completed ", " not-planned " or " duplicate .
+Naming a second issue with
+.B --as duplicate
+also writes a
+.B duplicate-of
+link to it.
+.TP
+.B reopen
+Set a closed issue's status back to open. An earlier close reason is left as it
+is; it only resolves while the status is terminal.
+.TP
+.B remove
+Unlist an issue, or retract one comment on it. Nothing is erased.
+.TP
+.B log
+The tracker's own history, one commit per change. Accepts
+.BR git-log (1)
+options.
+.TP
+.B pull
+Import issues from another clone or from a bridge. The target is
+.RI [ scheme :] remote :
+a bare remote is a git fetch,
+.B github:
+reads GitHub's API,
+.B ado:
+reads Azure DevOps', and
+.B gitea:
+reads a Gitea or Forgejo repository's. An
+.B ado:
+target may name an area after a
+.BR # ,
+as in
+.BR ado:origin#Web/Auth ,
+which scopes the import to that area and everything under it.
+.TP
+.B push
+Send issues to another clone or to a bridge. Takes the same targets. An area on
+an
+.B ado:
+target says where a work item this push
+.I creates
+is filed; one that already exists always keeps the area it has.
+.PP
+Ids abbreviate like object names, and an ambiguous prefix is refused rather
+than resolved arbitrarily. A comment's prefix only has to be unique within its
+issue.
+.SH OPTIONS
+.TP
+.B --version
+Print the version and exit.
+.TP
+.B -h
+Print the command list. Note that
+.B git issue --help
+opens this manual page, because
+.BR git (1)
+rewrites
+.B --help
+into
+.BR "git help issue" ;
+run
+.B git-issue --help
+to get the short command list instead.
+.PP
+Every command takes its own
+.BR --help ,
+which prints that command's flags:
+.BR "git issue list --help" .
+.SH EXAMPLES
+.PP
+File an issue, then list what is open:
+.PP
+.RS
+.EX
+git issue add -t "Anchor blobs are pruned by gc" -d "Seen on a fresh clone."
+git issue --state open
+.EE
+.RE
+.PP
+Show one issue, comment on it, and share it:
+.PP
+.RS
+.EX
+git issue 4b0755a3e769
+git issue comment 4b0755a3e769 -m "Confirmed."
+git issue push origin
+.EE
+.RE
+.PP
+Import from Azure DevOps, picking an area the first time, and write a change
+back:
+.PP
+.RS
+.EX
+git issue pull ado:origin
+git issue edit 4b0755a3e769
+git issue push ado:origin
+.EE
+.RE
+.SH ENVIRONMENT
+.TP
+.B GITHUB_TOKEN
+Token for the GitHub bridge; then
+.BR GH_TOKEN ,
+then
+.BR "gh auth token" ,
+then git's credential helpers.
+.TP
+.B AZURE_DEVOPS_EXT_PAT
+Personal access token for the Azure DevOps bridge; then
+.BR AZURE_DEVOPS_PAT ,
+then
+.BR SYSTEM_ACCESSTOKEN ,
+then
+.BR "az account get-access-token" ,
+then git's credential helpers.
+.TP
+.B GITEA_TOKEN
+Token for the Gitea bridge; then
+.BR FORGEJO_TOKEN ,
+then git's credential helpers.
+.TP
+.B GIT_PAGER
+Pager for output longer than a screen; then
+.BR core.pager ,
+then
+.BR PAGER ,
+then
+.BR less .
+Set any of them to
+.B cat
+to page nothing.
+.TP
+.B NO_COLOR
+Print plain, greppable output with no colour and no truncation.
+.SH FILES
+.TP
+.I docs/
+The specification:
+.I storage-model.md
+for where bytes live,
+.I blob-format.md
+for what is inside one entity,
+.I issues.md
+for the issue vocabulary,
+.I bridge-github.md
+and
+.I bridge-ado.md
+for what each bridge maps onto it.
+.TP
+.I .git/config
+.B issue.<tracker>.area
+holds the Azure DevOps area a pull is scoped to, chosen once per clone.
+.TP
+.I .git/git-issue/sync.json
+How far each tracker has been read. Local and disposable; losing it costs one
+full re-import.
+.SH SEE ALSO
+.BR git (1),
+.BR git-notes (1),
+.BR git-log (1)

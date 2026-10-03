@@ -1,0 +1,17 @@
+{
+  "count": 2,
+  "value": [
+    {
+      "version": 1, "text": "Reproduced locally.",
+      "createdBy": { "displayName": "Jane Roe", "uniqueName": "Jane.Roe@corp.example", "id": "11111111-1111-1111-1111-111111111111" },
+      "createdDate": "2026-01-06T12:00:00Z"
+    },
+    {
+      "version": 2, "text": "Reproduced on the shared build, not just locally.",
+      "createdBy": { "displayName": "Jane Roe", "uniqueName": "Jane.Roe@corp.example", "id": "11111111-1111-1111-1111-111111111111" },
+      "createdDate": "2026-01-06T12:00:00Z",
+      "modifiedBy": { "displayName": "Jane Roe", "uniqueName": "Jane.Roe@corp.example", "id": "11111111-1111-1111-1111-111111111111" },
+      "modifiedDate": "2026-01-06T12:30:00Z"
+    }
+  ]
+}

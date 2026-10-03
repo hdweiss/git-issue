@@ -1,0 +1,44 @@
+# Release archives for `mise install github:hdweiss/git-issue`.
+#
+# mise picks the asset whose name carries the host's OS and architecture, so
+# the default <project>_<version>_<os>_<arch> naming is what it matches on.
+# Both binaries sit at the archive root, which mise puts on PATH as a whole.
+version: 2
+
+project_name: git-issue
+
+builds:
+  # Mirrors the Makefile: static, trimmed, version stamped into main.version.
+  - id: git-issue
+    main: ./cmd/git-issue
+    binary: git-issue
+    env: [CGO_ENABLED=0]
+    flags: [-trimpath]
+    ldflags: ["-s -w -X main.version={{ .Version }}"]
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+  - id: git-review
+    main: ./cmd/git-review
+    binary: git-review
+    env: [CGO_ENABLED=0]
+    flags: [-trimpath]
+    ldflags: ["-s -w -X main.version={{ .Version }}"]
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+
+archives:
+  - ids: [git-issue, git-review]
+    formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files:
+      - LICENSE
+      - README.md
+      - man/*.1
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  use: github

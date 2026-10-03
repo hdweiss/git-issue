@@ -1,0 +1,5 @@
+f55f8e0bfdc1  open         (no title)  💬 1
+e9037839d7f8  open         Anchor blobs are pruned by gc
+885797fb2d9b  open    bug  Reject "short" ids — fatal: failed to resolve ✓  [bug, design]
+45cf71414905  open         cat_sort_uniq reorders the blob  💬 5
+0bcd4859d4fe  closed       Duplicate of the fanout question

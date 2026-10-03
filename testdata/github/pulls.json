@@ -1,0 +1,182 @@
+{
+  "data": {
+    "repository": {
+      "pullRequests": {
+        "totalCount": 2,
+        "pageInfo": { "hasNextPage": false, "endCursor": "Y3Vyc29yOjI=" },
+        "nodes": [
+          {
+            "id": "PR_kwDOAbCdEf4AAAAB",
+            "number": 41,
+            "url": "https://github.com/hdweiss/git-issue/pull/41",
+            "title": "Fix the area subtree walk",
+            "body": "The picker dropped the subtree when the area was a leaf.",
+            "createdAt": "2026-08-01T09:00:00Z",
+            "updatedAt": "2026-08-03T17:30:00Z",
+            "state": "OPEN",
+            "isDraft": false,
+            "locked": false,
+            "baseRefName": "main",
+            "headRefName": "fix-area-walk",
+            "headRefOid": "3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d",
+            "author": { "login": "hdweiss" },
+            "milestone": { "title": "v2" },
+            "headRepository": { "name": "git-issue", "owner": { "login": "contributor" } },
+            "labels": { "nodes": [{ "name": "bug" }, { "name": "area" }] },
+            "reviewRequests": {
+              "nodes": [
+                { "requestedReviewer": { "login": "reviewer" } },
+                { "requestedReviewer": { "slug": "maintainers" } }
+              ]
+            },
+            "comments": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "id": "IC_kwDOxYzAbC1",
+                  "body": "Thanks for picking this up.",
+                  "createdAt": "2026-08-01T10:00:00Z",
+                  "author": { "login": "reviewer" }
+                }
+              ]
+            },
+            "reviews": {
+              "nodes": [
+                {
+                  "id": "PRR_kwDO1",
+                  "state": "CHANGES_REQUESTED",
+                  "body": "One thing below.",
+                  "createdAt": "2026-08-02T11:00:00Z",
+                  "author": { "login": "reviewer" },
+                  "commit": { "oid": "9f2c1ab74e0d3b5f8c6e2a1d40b7e93c5a8f1d26" }
+                },
+                {
+                  "id": "PRR_kwDO2",
+                  "state": "APPROVED",
+                  "body": "",
+                  "createdAt": "2026-08-03T17:00:00Z",
+                  "author": { "login": "reviewer" },
+                  "commit": { "oid": "3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d" }
+                },
+                {
+                  "id": "PRR_kwDO3",
+                  "state": "PENDING",
+                  "body": "not submitted yet",
+                  "createdAt": "2026-08-03T17:10:00Z",
+                  "author": { "login": "someone" },
+                  "commit": null
+                }
+              ]
+            },
+            "reviewThreads": {
+              "pageInfo": { "hasNextPage": false, "endCursor": null },
+              "nodes": [
+                {
+                  "id": "PRRT_kwDO1",
+                  "isResolved": true,
+                  "isOutdated": true,
+                  "path": "internal/issue/area.go",
+                  "diffSide": "RIGHT",
+                  "line": 44,
+                  "startLine": null,
+                  "comments": {
+                    "nodes": [
+                      {
+                        "id": "PRRC_kwDO1",
+                        "body": "This drops the subtree when the area is a leaf.",
+                        "createdAt": "2026-08-02T11:00:00Z",
+                        "author": { "login": "reviewer" },
+                        "path": "internal/issue/area.go",
+                        "originalLine": 42,
+                        "originalStartLine": null,
+                        "originalCommit": { "oid": "9f2c1ab74e0d3b5f8c6e2a1d40b7e93c5a8f1d26" }
+                      },
+                      {
+                        "id": "PRRC_kwDO2",
+                        "body": "Fixed in the next revision.",
+                        "createdAt": "2026-08-03T16:00:00Z",
+                        "author": { "login": "hdweiss" },
+                        "path": "internal/issue/area.go",
+                        "originalLine": 42,
+                        "originalStartLine": null,
+                        "originalCommit": { "oid": "9f2c1ab74e0d3b5f8c6e2a1d40b7e93c5a8f1d26" }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "closingIssuesReferences": { "nodes": [{ "id": "I_kwDOAbCdEf1" }] },
+            "commits": {
+              "nodes": [
+                {
+                  "commit": {
+                    "oid": "3ac8e05f19b7d24c6e0a8f3b51d97c4e2b60af8d",
+                    "statusCheckRollup": {
+                      "contexts": {
+                        "nodes": [
+                          {
+                            "__typename": "CheckRun",
+                            "name": "build",
+                            "conclusion": "SUCCESS",
+                            "status": "COMPLETED",
+                            "detailsUrl": "https://ci.example.com/1",
+                            "startedAt": "2026-08-03T16:30:00Z",
+                            "checkSuite": { "app": { "name": "GitHub Actions" } }
+                          },
+                          {
+                            "__typename": "StatusContext",
+                            "context": "sonarqube/quality-gate",
+                            "state": "FAILURE",
+                            "targetUrl": "https://sonar.example.com/42",
+                            "createdAt": "2026-08-03T16:40:00Z"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PR_kwDOAbCdEf4AAAAC",
+            "number": 40,
+            "url": "https://github.com/hdweiss/git-issue/pull/40",
+            "title": "Retire the old walker",
+            "body": "",
+            "createdAt": "2026-07-20T08:00:00Z",
+            "updatedAt": "2026-07-22T12:00:00Z",
+            "state": "MERGED",
+            "isDraft": true,
+            "locked": false,
+            "baseRefName": "main",
+            "headRefName": "retire-walker",
+            "headRefOid": "5c1d0be77451aa3390fb62e0c1f4d9e8a7b32104",
+            "author": { "login": "hdweiss" },
+            "milestone": null,
+            "headRepository": null,
+            "labels": { "nodes": [] },
+            "reviewRequests": { "nodes": [] },
+            "comments": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "reviews": {
+              "nodes": [
+                {
+                  "id": "PRR_kwDO9",
+                  "state": "DISMISSED",
+                  "body": "Superseded by the rewrite.",
+                  "createdAt": "2026-07-21T09:00:00Z",
+                  "author": { "login": "reviewer" },
+                  "commit": { "oid": "5c1d0be77451aa3390fb62e0c1f4d9e8a7b32104" }
+                }
+              ]
+            },
+            "reviewThreads": { "pageInfo": { "hasNextPage": false, "endCursor": null }, "nodes": [] },
+            "closingIssuesReferences": { "nodes": [] },
+            "commits": { "nodes": [] }
+          }
+        ]
+      }
+    }
+  }
+}

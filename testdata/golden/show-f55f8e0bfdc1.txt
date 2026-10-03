@@ -1,0 +1,12 @@
+issue f55f8e0bfdc1dbbdb48c914ee2fe4a144b88e2d1
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:53:20 2026 +0200
+Status: open
+
+    (no title)
+
+comment 090bea706436b1d773caf89c15b835145d5849a4
+Author: hdweiss@gmail.com
+Date:   Mon Aug 17 22:55:00 2026 +0200
+
+    A comment, so the count is non-zero.

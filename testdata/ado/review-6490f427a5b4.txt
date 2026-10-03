@@ -1,0 +1,6 @@
+{"a":"ado:bob@example.com","c":1715328000,"n":"a267d021662442dd","op":"create","ts":1715328000,"v":1,"val":"review"}
+{"a":"ado:bob@example.com","c":1715328000,"n":"a68a5ad45146ab79","op":"title","ts":1715328000,"v":1,"val":"WIP: async walk"}
+{"a":"ado:bob@example.com","c":1715328000,"n":"cb0904f663c6bda0","op":"base","ts":1715328000,"v":1,"val":"main"}
+{"a":"ado:bob@example.com","c":1715328000,"n":"e731554d9bd34a98","op":"head","ts":1715328000,"v":1,"val":"async-walk"}
+{"a":"ado:bob@example.com","c":1715328000,"n":"71d20639691ed388","op":"head.sha","ts":1715328000,"v":1,"val":"9999888877776666555544443333222211110000"}
+{"a":"ado:bob@example.com","c":1715328000,"n":"7691b4101cccf2ae","op":"draft","ts":1715328000,"v":1,"val":true}

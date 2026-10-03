@@ -1,0 +1,7 @@
+{"a":"github:ghost","c":1772784000,"n":"d6c9fd1e3202385a","op":"create","ts":1772784000,"v":1,"val":"issue"}
+{"a":"github:ghost","c":1772784000,"n":"e8054deaa5e33405","op":"title","ts":1772784000,"v":1,"val":"Transferred issue with no timeline"}
+{"a":"github:ghost","c":1772784000,"n":"f0cf17c525c8c51d","op":"description","ts":1772784000,"v":1,"val":"History did not survive the transfer."}
+{"a":"github:ghost","c":1772784000,"n":"d293740bd63bf888","op":"assignee.add","ts":1772784000,"v":1,"val":"octocat"}
+{"a":"github:ghost","c":1772784000,"n":"dfcd22c0e1d482c7","op":"milestone","ts":1772784000,"v":1,"val":"v2"}
+{"a":"github:ghost","c":1772784000,"n":"e4295febd55b98d9","op":"status","ts":1772784000,"v":1,"val":"closed"}
+{"a":"github:ghost","c":1772784000,"n":"43867b5cfeca6f09","op":"status.reason","ts":1772784000,"v":1,"val":"not_planned"}
