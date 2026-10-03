@@ -1,32 +1,36 @@
 name: release
 
 # Push a tag like v0.1.0 to publish a GitHub release with archives for
-# linux/darwin/windows on amd64 and arm64.
+# linux/darwin/windows on amd64 and arm64. Running it by hand builds the same
+# archives as a snapshot and publishes nothing.
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
+          # No dependencies, so no go.sum and nothing to cache.
+          cache: false
 
       - name: Test
         run: make test
 
-      - uses: goreleaser/goreleaser-action@v6
+      - uses: goreleaser/goreleaser-action@v7
         with:
           version: "~> v2"
-          args: release --clean
+          args: ${{ github.ref_type == 'tag' && 'release --clean' || 'release --snapshot --clean' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
